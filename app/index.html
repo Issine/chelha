@@ -5,19 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
   <title>Git et GitHub</title>
-  <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable travel">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <meta name="keywords" content="git, init, status, add, commit -m, diff, log, checkout, branch, merge, remote, push, pull">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">		
-  <style>
-	body {
-		background-color : #dcb;
-	}
-  </Style>
   </head>
 <body>
-  <header>
-    <img src="assets/images/icons/clear-view-escapes.svg">
-    <a href="#">Entrer en contact</a>
-    <nav>
+  <div class="container">
+  <header class="row">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<img src="assets/images/icons/clear-view-escapes.svg" class="first_icon">
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<a href="#">Entrer en contact</a>
+		</div>
+	</div>
+   <nav class="nav navbar-inverse">
       <ul>
         <li><a href="#our-beginning">Notre début</a></li>
         <li><a href="#features">Caractéristiques</a></li>
@@ -27,7 +34,7 @@
   </header>
 
   <div class="large-hero">
-    <img src="assets/images/hero--large.jpg">
+    <img src="assets/images/etagere.jpg">
     <h1>Premiers pas avec Git.</h1>
     <h2>Téléchargement et installation de Git.</h2>
     <p>Télécharger Git à l'adresse "http://git-scm.com/" et l'installer en suivant les indications du programme d'installation (Il suffit de cliquer sur "next" jusqu'à la dernière étape).<br>
@@ -38,13 +45,19 @@
 
   <div id="our-beginning">
     <h2>Configuration de l'identité.</h2>
-    <h3>Ever since, we&rsquo;ve been working to make travel better for everyone.</h3>
+    <h5>&rarr; git config --global user.name "nom prénom".</h5>
+	<h5>&rarr; git config --global user.email "identifiant@domaine.xxx".</h5>
+	<h5>&rarr; git config -l.</h5>
     <img src="assets/images/first-trip.jpg" alt="Couple walking down a street.">
     <img src="assets/images/our-start.jpg" alt="Our founder, Jane Doe">
-    <h2>Here&rsquo;s how we got started&hellip;</h2>
-    <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Duis aute irure dolor in <strong>reprehenderit in</strong> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum velit esse cillum <strong>dolore eu fugiat.</strong></p>
+    <h2>Quelques commandes de base</h2>
+    <p>&rarr; <strong>mkdir new_project</strong> : pour créer un répertoire/dossier/projet/repository.</p>
+    <p>&rarr; <strong>cd new_project</strong> : pour accéder/se placer sur le repository créé.</p>
+    <p>&rarr; <strong><span class="git_command">git init</span></strong> : Je dis à Git que je vais travailler sur ce "repository". Je lui demande de "versionner" mon projet.<br>
+	   J'obtiens comme réponse :<blockquote>initialized empty git repository<br>in c:/users/WIN7/new_project/.git/</blockquote></p>
+	<p>&rarr; <strong><span class="git_command">git status</span></strong> :<br>
+	   j'obtiens la réponse : il y a rien dans le projet.<blockquote>on branch master<br>no commit yet<br>nothing to commit (create/copie files and use "git add" to track)</blockquote>
+	   Dans c:/users/WIN7/new_project, Je crée un fichier index.html (de manière classique - avec la souris ...). je l'ouvre avec un éditeur de texte (Notepad++, Sublim Text, Brackets, ...) et j'édite juste une ligne de code, exemple : &lt;h1&gt;Bonjour&lt;/h1&gt;. Puis je reviens dans Git en ligne de commande et je fais </p>
   </div>
 
   <div id="features">
@@ -91,5 +104,7 @@
   <footer>
     <p>Copyright &copy; 2016 Clear View Escapes. All rights reserved. <a href="#">Get in Touch</a></p>
   </footer>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </div>
 </body>
 </html>
